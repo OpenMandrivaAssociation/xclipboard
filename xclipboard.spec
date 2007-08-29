@@ -40,7 +40,7 @@ rm -rf %{buildroot}
 %{_bindir}/xclipboard
 %{_bindir}/xcutsel
 %{_datadir}/X11/app-defaults/XClipboard
-%{_mandir}/man1/xclipboard.1x.bz2
-%{_mandir}/man1/xcutsel.1x.bz2
+%{_mandir}/man1/xclipboard.*
+%{_mandir}/man1/xcutsel.*
 
 
