@@ -1,6 +1,6 @@
 Name:		xclipboard
 Version:	1.0.1
-Release:	%mkrel 6
+Release:	%mkrel 7
 Summary:	X clipboard client
 Group:		Development/X11
 Source:		http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
@@ -23,6 +23,7 @@ new buffer and displays it in the text window.
 %setup -q -n %{name}-%{version}
 
 %build
+autoreconf -ifs
 %configure2_5x	--x-includes=%{_includedir}\
 		--x-libraries=%{_libdir}
 
