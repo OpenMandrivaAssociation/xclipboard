@@ -1,9 +1,9 @@
 Name:		xclipboard
-Version:	1.1.3
-Release:	4
+Version:	1.1.4
+Release:	1
 Summary:	X clipboard client
 Group:		Development/X11
-Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
 License:	MIT
 
 BuildRequires: pkgconfig(xt)
@@ -22,11 +22,11 @@ new buffer and displays it in the text window.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/xclipboard
