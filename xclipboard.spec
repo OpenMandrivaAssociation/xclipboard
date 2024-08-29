@@ -1,9 +1,9 @@
 Name:		xclipboard
-Version:	1.1.4
-Release:	2
+Version:	1.1.5
+Release:	1
 Summary:	X clipboard client
 Group:		Development/X11
-Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
+Source0:	https://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
 License:	MIT
 
 BuildRequires: pkgconfig(xt)
