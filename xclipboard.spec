@@ -1,16 +1,15 @@
 Name:		xclipboard
 Version:	1.1.5
-Release:	1
+Release:	2
 Summary:	X clipboard client
 Group:		Development/X11
 Source0:	https://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
 License:	MIT
 
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
-BuildRequires:	make
+BuildSystem:   autotools
+
+BuildRequires: libtool-base
+BuildRequires: slibtool
 BuildRequires: pkgconfig(xt)
 BuildRequires: xaw-devel
 BuildRequires: x11-util-macros >= 1.0.1
@@ -23,15 +22,6 @@ string, each of which can be selected. Each time clipboard is asserted by
 another application, xclipboard transfers the contents of that selection to a
 new buffer and displays it in the text window.
 
-%prep
-%setup -q -n %{name}-%{version}
-
-%build
-%configure
-%make_build
-
-%install
-%make_install
 
 %files
 %{_bindir}/xclipboard
